@@ -1,7 +1,9 @@
 import React from "react";
-
-function Button({ text }) {
-  return <button type="submit">{text}</button>;
+function Button({ text, type = "button", onClick }) {
+  return (
+    <button type={type} onClick={onClick}>
+      {text}
+    </button>
+  );
 }
-
 export default Button;
